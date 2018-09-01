@@ -8,15 +8,15 @@ import org.apache.logging.log4j.Logger;
 
 public class Main {
 
-    private static Logger logger = LogManager.getLogger();
+    private static final Logger logger = LogManager.getLogger();
     public static void main(String[] args) {
 
         logger.info("Starting demo");
         ServerThread server = new ServerThread();
-        server.run();
+        server.start();
 
         ClientThread client = new ClientThread();
-        client.run();
+        client.start();
 
 
     }
