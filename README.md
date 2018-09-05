@@ -10,7 +10,7 @@ More info about [ProtocolBuffer]() and [ZeroMQ]().
 ```yaml
 mvn clean install
 
-java -jar targer/protobufdemo.jar
+java -jar target/protobuf.jar
 ```
 
 In order to add custom message 
