@@ -9,11 +9,14 @@ import org.apache.logging.log4j.Logger;
 public class Main {
 
     private static final Logger logger = LogManager.getLogger();
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
 
         logger.info("Starting demo");
         ServerThread server = new ServerThread();
         server.start();
+
+        Thread.sleep(5000);
 
         ClientThread client = new ClientThread();
         client.start();

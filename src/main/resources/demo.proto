@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package model;
+
+option java_package = "org.abondar.experimental.protobufdemo.model";
+option java_outer_classname = "Person";
+
+message PersonMsg {
+  string firstName = 1;
+  string lastName = 2; 
+  int32 id = 3;
+  string email = 4;
+
+
+  enum Employee {
+    DEVELOPER  = 0;
+    QA = 1;
+    MANAGER = 2;
+  }
+
+  message Department {
+    string departmentName =1;
+  }
+  
+   Employee emp = 5;
+   
+  Department department = 6;
+}

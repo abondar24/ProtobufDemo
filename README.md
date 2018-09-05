@@ -13,3 +13,7 @@ mvn clean install
 java -jar targer/protobufdemo.jar
 ```
 
+In order to add custom message 
+```yaml
+protoc -I=<project_dir> --java_out=<project_dir>/<sources_dir> <project_dir>/<proto_file_dir>/file.proto
+```
